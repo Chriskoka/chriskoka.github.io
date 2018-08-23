@@ -1,8 +1,28 @@
 body {
     background-color: #acb54a;
-    text-decoration: underline wavy ;
+    text-decoration: none ;
 }
 
 a {
     text-decoration: none;
+}
+
+.title {
+    text-decoration: underline wavy
+}
+
+.text {
+    color:#34a4d3; font-size:20; 
+}
+
+.hereA {
+    text-decoration: underline wavy; font-style: italic; font-family: cursive
+}
+
+.Foods {
+    color:#8c008e;font-size:30;
+}
+
+.Sports{
+    color:#8c008e;font-size:30;
 }
