@@ -8,11 +8,11 @@ a {
 }
 
 .title {
-    text-decoration: underline wavy
+    text-decoration: underline; text-align: center; font-size: 40;
 }
 
 .text {
-    color:#34a4d3; font-size:20; 
+    color:#34a4d3; font-size:20; text-align: center;
 }
 
 .hereA {
@@ -25,4 +25,24 @@ a {
 
 .Sports{
     color:#8c008e;font-size:30;
+}
+
+.foodList {
+    color:#f704df; font-style: italic; font-variant: small-caps;
+}
+
+.sportList {
+    color:#f704df; font-style: italic; font-variant: small-caps;
+}
+
+#pages {
+    text-decoration: underline; font-style: italic; text-align: center
+}
+
+.pagesT {
+    color:#d66802; text-decoration: underline; font-weight: bold; font-size: 30; text-align: center;
+}
+
+.pLink {
+    color:#d66802;
 }
