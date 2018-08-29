@@ -22,7 +22,7 @@ ul{
 
 .button_1{
     height:38px;
-    background:#09c400;
+    background:#e8491d;
     border:0;
     padding-left:20px;
     padding-right:20px;
@@ -31,7 +31,7 @@ ul{
 
 .dark{
     padding:15px;
-    background:#003387;
+    background:#35424a;
     color:#ffffff;
     margin-top:10px;
     margin-bottom:10px;
@@ -40,11 +40,11 @@ ul{
 
     /*Header **/
 header{
-    background:#003387;
+    background:#35424a;
     color:#ffffff;
     padding-top:30px;
     min-height:70px;
-    border-bottom:#09c400 3px solid;
+    border-bottom:#e8491d 3px solid;
 }
 
 header a{
@@ -74,7 +74,7 @@ header nav{
 }
 
 header .highlight, header .current a{
-    color:#09c400;
+    color:#e8491d;
     font-weight:bold;
 }
 
@@ -107,7 +107,7 @@ header a:hover{
 #newsletter{
     padding:15px;
     color:#ffffff;
-    background:#003387;
+    background:#35424a;
 }
 
 #newsletter h1{
@@ -170,17 +170,17 @@ footer{
     padding:20px;
     margin-top:20px;
     color:#ffffff;
-    background-color:#09c400;
+    background-color:#e8491d;
     text-align:center;
 }
 
-@media(max-width:768px){
+@media(max-width: 768px){
     header #branding,
     header nav,
     header nav li,
     #newsletter h1,
-    #newsletter form,
-    #boxes .box,
+    #newsletter form
+    #boxes .box
     #main-col,
     #sidebar{
         float:none;
