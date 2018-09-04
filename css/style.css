@@ -90,7 +90,7 @@ header a:hover{
     background:url('../img/test.jpg') no-repeat;
     background-size:cover;
     text-align:center;
-    color:#ffffff;
+    
 }
 
 #showcase{
@@ -99,6 +99,15 @@ header a:hover{
 
 #showcase p{
     font-size:20px;
+}
+
+#showcase h1, p{
+    color:#1E21E0;
+    background-color: rgba(30, 224, 40, 0.7) ;
+}
+
+#showcase h1{
+    
 }
 
 /* Newsletter */
