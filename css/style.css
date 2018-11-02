@@ -7,6 +7,9 @@ body{
     background-color:#f4f4f4;
 }
 
+#none nothing nocolor{
+    color:#ffffff;
+}
 
     /* Global */
 .container{
@@ -103,7 +106,6 @@ header a:hover{
 
 #showcase h1, p{
     color:#1E21E0;
-    background-color: rgba(30, 224, 40, 0.7) ;
 }
 
 #showcase h1{
