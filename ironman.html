@@ -12,15 +12,15 @@ import processing.pdf.*;
 *  Initializing all the variables
 */
 PFont font1; PFont font2; PFont bold;
-PImage bg; PImage bgR; PImage cat; PImage cat2; PImage costume;
+PImage bg; PImage bgR; PImage ironman; PImage ironman2; PImage costume;
 
 int x; int cx; int cy; int cVy; int moveSpeed;
 int numKnives = 7;
-int gameState; PImage knife; int[] kx = new int[numKnives]; int[] ky = new int[numKnives]; int count;
+int gameState; PImage missile; int[] kx = new int[numKnives]; int[] ky = new int[numKnives]; int count;
 int score; int highScore; 
-PImage bullet; int bx; int by;
+PImage nuke; int bx; int by;
 PImage fireBall; int fx; int fy;
-PImage back2; int fireCount; int bulletCount;
+PImage back2; int fireCount; int nukeCount;
 boolean isShooting; boolean bull;
 PImage ghost; PImage ghostCostume; PImage ghost2; PImage ghostR; PImage ghost2R;
 int gx; int gy; int ghostCount; int ghostTimer; int ghostCount2;
@@ -41,11 +41,11 @@ void setup(){
   size(800,600);
   bg = loadImage("./img/bg.jpg");
   bgR = loadImage("./img/bgR.jpg");
-  cat = loadImage("./img/ironmanF.png");
-  cat2 = loadImage("./img/ironman2F.png");
-  costume = cat;
-  knife = loadImage("./img/missileF.png");
-  bullet = loadImage("./img/nukeF.png");
+  ironman = loadImage("./img/ironmanF.png");
+  ironman2 = loadImage("./img/ironman2F.png");
+  costume = ironman;
+  missile = loadImage("./img/missileF.png");
+  nuke = loadImage("./img/nukeF.png");
   fireBall = loadImage("./img/fireballF.png");
   back2 = loadImage("./img/bg2R.jpg");
   ghost = loadImage("./img/enemy.png"); 
@@ -108,7 +108,7 @@ void draw(){
     if(abs((int)((cx+35)-(kx[i]+7))) < 22 && abs((int)((cy+34) - (ky[i]+41))) < 74){
       gameState=1;
     }
-    image(knife, kx[i], ky[i]);
+    image(missile, kx[i], ky[i]);
     
     //Nuke Code
     if(score >10){
@@ -123,7 +123,7 @@ void draw(){
       if(abs((int)((cx+35)-(bx+75))) < 80 && abs((int)((cy+34) - (by+52))) < 86){
         gameState=1;
       }
-      image(bullet, bx, by);
+      image(nuke, bx, by);
     }     
   }
       //Enemy Code WIP
@@ -198,7 +198,7 @@ void draw(){
     cVy ++;
   }
   x--;
-  checkCat();
+  checkironman();
   
   //Blue Fireball code
   image(fireBall, fx, fy);
@@ -207,13 +207,13 @@ void draw(){
       bx+=2000;  
       fx =20000;
       score++;
-      if(bulletCount==0){
+      if(nukeCount==0){
         bull = true;
       }
-      if(bulletCount>0){
+      if(nukeCount>0){
         bull = false; 
       }
-      bulletCount++;
+      nukeCount++;
       
   }
   if(fx > width + 20){
@@ -341,12 +341,12 @@ void mousePressed(){
   else if(mouseButton == RIGHT){
     fire();
   }
-  costume = cat2;
+  costume = ironman2;
   
 }
 
 void mouseReleased(){
-  costume = cat; 
+  costume = ironman; 
 }
 void fire(){
   fx = cx + 20;
@@ -359,7 +359,7 @@ void fire(){
     isShooting = false;
   }
 }
-void checkCat(){
+void checkironman(){
   if(cy > height || cy < -80){
     gameState =1;
   }
