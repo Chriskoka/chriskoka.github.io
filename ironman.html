@@ -271,26 +271,26 @@ void draw(){
   if(score > 8 && score < 12){
     fill(255,50,50);
     textSize(50);
-    text("WARNING! ROCKETS!!! ", 160, 110);
+    text("WARNING! NUKES!!! ", 160, 110);
     fill(0);
     textSize(16);
   }
   if(fireCount < 1 && score > 0){
     if(score <5){
-      text("Did you know Mario can shoot FIREBALLS?", 120, 30);
+      text("Did you know Ironman can shoot FIREBALLS?", 120, 30);
     }
     else{
-       text("Use the RIGHT MOUSE to shoot", 120, 30);
+       text("Use the RIGHT MOUSE/SPACEBAR to shoot", 120, 30);
     }
   }
   if(!isShooting && fireCount >0 && score > 3){
      text("Nice Job!  You Learned to Shoot", 120, 30);
      if(fireCount > 3){
-        text("I wonder what things can be killed by fireballs?", 140, 60);
+        text("I wonder what things can be destroyed by fireballs?", 140, 60);
      }
    }
    if(bull &&score < 20){
-     text("WOW!  Fireballs can destroy Bullets!", 140, 60);
+     text("WOW!  Fireballs can destroy NUKES!", 140, 60);
    }
   
   //START SCREEN
@@ -299,7 +299,7 @@ void draw(){
     fill(0,0,0, 151);
     textSize(24);
     textFont(font1);
-    text("*Click Mario to play!", 50, 40);
+    text("*Click the edge of the picture to play!", 50, 40);
     if(mousePressed && mouseX>250){
       gameState = 0;
     }   
@@ -311,7 +311,7 @@ void draw(){
     
     fill(0,0,0, 255);
     textFont(bold);
-    text("MARIO CONTROLS", 25, 115);
+    text("IRONMAN CONTROLS", 25, 115);
     noFill();
     rect(10, 125, 248,75, 5);
   }
